@@ -1,3 +1,152 @@
-h1 {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+
+.side-panel {
+    display: flex;
+    flex-grow: 1;
+    background-image: url(media/f0bfb261e5926abaedd0532b4284e25f2c8a9606.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-basis: 40%;
+    height: 100%; /* Extends across screen */
+    position: relative;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 190px;
+    height: 20%;
+    background-color: black;
+    opacity: 0.4;
+    width: 100%;
+}
+
+.odin-logo {
+    width: auto;
+    height: auto;
+}
+
+.right-side {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 60%;
+    width: 100%;
+    height: 100%;
+
+}
+
+.top-section {
+
+    display: flex;
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-part {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-items: start;
+    background-color: inherit;
+}
+
+.bottom {
+
+    background-color: rgb(233, 233, 233);
+    height: 100%;
+}
+.row {
+    display: contents;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    text-shadow: .5px .5px rgb(196, 196, 196);
+}
+
+input {
+    border-radius: 5px;
+    width: 15em;
+    height: 2em;
+    border: .1em solid rgb(167, 167, 167);
+    outline: none;
+    text-indent: .5em;
+}
+
+
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: .1em solid red;
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    border: .1em solid blue;
+}
+
+button {
+    margin: 2em 0em 3em 3em;
+    background-color: rgb(70, 85, 55);
+    font-weight: bold;
+    color: white;
+    width: 15em;
+    height: 3.5em;
+    padding: 10px;
+    border-radius: .5em;
+    border: 0em;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+a {
     color: blue;
+    text-decoration: none;
+}
+
+footer {
+    padding-left: 20px;
 }
